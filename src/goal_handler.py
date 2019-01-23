@@ -1,10 +1,18 @@
 '''
-Load a factorio goal from a json file
+Load a factorio goal from a text file
+
+@params:
+    goal_text : a string of goal parameters, separate key of goal from value required with a comma,
+        separate individual goals using a semicolon
+
 '''
 class goal:
-    def __init__(self, file=""):
+    def __init__(self, goal_text=""):
         self.completion_percent = 0.00 #max 100
-        temp_file_output = "copper-ore,5;tin-ore,5"
+        if goal_text is not None:
+            temp_file_output = goal_text
+        else:
+            temp_file_output = "copper-ore,5;tin-ore,5"
 
         self.initial_goals = self.parse_goal_input(temp_file_output) #parse the provided goals into a dictionary
         self.curr_goals = self.initial_goals.copy()
