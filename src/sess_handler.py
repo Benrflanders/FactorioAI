@@ -15,19 +15,18 @@ def main():
     #initialize bot
         
     #initialize the goal for the current session
-    goal = goal_handler.goal("copper-ore-touch,1")
+    goal = goal_handler.goal("player-moved,100")
 
     #check to see if the goal was initialized correctly
     goal.print_current_goals()
 
-    while(True):
+    while(goal.is_complete() is not True):
 
         #check for goal updates
         goal.check_for_updates()
 
         #have the bot take action
-
-
+        factorio_screen_handler.run_randomly()
 
 
 if __name__ == '__main__':

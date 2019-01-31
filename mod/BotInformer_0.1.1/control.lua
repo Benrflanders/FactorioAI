@@ -1,9 +1,9 @@
 require "util"
 
-scripts.on_nth_tick(4, function(event)
-    game.take_screenshot()
-
-end)
+---script.on_nth_tick(4, function(event)
+---    game.take_screenshot()
+---
+---end)
 
 script.on_event(defines.events.on_player_mined_entity, function(event)
     --check if mined entity is copper
