@@ -1,6 +1,7 @@
 import os
 import time
 import goal_handler
+import bot_handler
 
 
 
@@ -31,11 +32,13 @@ def main():
         print("Path exists!")
 
     #start factorio
-    #initialize bot
+
+    #initialize bot and bind bot to screen
+
     #bind bot to screen
 
     #initialize the goal for the current session
-    goal = goal_handler.goal("copper-ore,5")
+    goal = goal_handler.goal("copper-ore-touch,1")
 
     #check to see if the goal was initialized correctly
     goal.print_current_goals()

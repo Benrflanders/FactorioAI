@@ -12,7 +12,7 @@ class goal:
         if goal_text is not None:
             temp_file_output = goal_text
         else:
-            temp_file_output = "copper-ore,5;tin-ore,5"
+            temp_file_output = "copper-ore-touch,1"
 
         self.initial_goals = self.parse_goal_input(temp_file_output) #parse the provided goals into a dictionary
         self.curr_goals = self.initial_goals.copy()
